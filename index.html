@@ -20,8 +20,11 @@
             <div class="disc" v-for="element in dischi">
                 <img :src="element.poster" alt="">
                 <div class="title">{{element.title}}</div>
-                <div class="author">{{element.author}}</div>
-                <div class="year">{{element.year}}</div>
+                <div class="disc_foot">
+                    <div class="author">{{element.author}}</div>
+                    <div class="year">{{element.year}}</div>
+                </div>
+                
             </div>
         </div>
     </main>
