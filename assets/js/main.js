@@ -1,23 +1,14 @@
 const app = new Vue({
     el: '#app',
     data: {
-        poster: {},
-        title: {},
-        author: {},
-        year: {}
+        dischi: {}
     },
     methods: {},
     mounted(){
         axios
             .get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(response => {
-                console.log(response.data.response);
-                for (let i = 0; i < response.data.response.length; i++){
-                    this.poster.push(response.data.response[i].poster) 
-                }
-                console.log(this.poster);
-                
-
+                this.dischi = response.data.response;
             })
     }
 })

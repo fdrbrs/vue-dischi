@@ -7,11 +7,26 @@
     <title>Vue Dischi</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Montserrat', sans-serif; -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     
-    <div id="app"></div>
-    <!-- font-family: 'Montserrat', sans-serif; -->
+    <header>
+        <img src="./assets/img/logo-small.svg" alt="spotify_logo">
+    </header>
+    <main>
+        <div id="app">
+            <div class="disc" v-for="element in dischi">
+                <img :src="element.poster" alt="">
+                <div class="title">{{element.title}}</div>
+                <div class="author">{{element.author}}</div>
+                <div class="year">{{element.year}}</div>
+            </div>
+        </div>
+    </main>
+    
+    
 
     <!-- CDN VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
